@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<link rel = "stylesheet" type = "text/css" href = "myStyle.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>The Maple Inn</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+<style>
+/* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+@import url(https://fonts.googleapis.com/css?family=Raleway+Dots);
+@import url(https://fonts.googleapis.com/css?family=Advent+Pro:400,200,700);
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+section #services {
+  float: right;
+  margin-right: 310px;
+  margin-bottom: 20px;
+  text-align: center;
+  transform: translatez(0);
+}
+section #services li {
+  width: 50px;
+  height: 12px;
+  display: inline-block;
+  margin: 0px;
+  list-style: none;
+}
+section #services li div {
+  width: 50px;
+  height: 50px;
+  color: #2c3e50;
+  font-size: 2.0em;
+  text-align: center;
+  line-height: 50px;
+  background-color: #ecf0f1;
+  transition: all 0.5s ease;
+}
+section #services li div:hover {
+  transform: rotate(360deg);
+  border-radius: 70px;
+}
+section #services li a:hover {
+  text-decoration: none;
+}
+#footer {
+	background-color: #2c3e50;
+	width: 100%;
+	left: 0;
+	right: 0;
+	position: absolute;
+}
+.foot {
+	margin-left: 30px;
+}
+.headfoot {
+	text-align: center;
+	color: #f1c40f;
+	font-size: 25px;
+	font-family: comic sans;
+	font-weight: 100;
+}
+.neon {
+	font-size: 20px;
+}
+.copyright {
+	color: #bdc3c7;
+}
+.bottom {
+	float: right;
+	text-align: left;
+	margin-right: 22px;
+}
+.yes{
+	margin-left:0px;
+	margin-right:15px;
+	margin-top:20px;
+}
+.list_line{
+	float:right;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #f1f1f1;
+    padding: 20px;
+    font-family: Arial;
+}
+/* Center website */
+.main {
+    max-width: 1000px;
+    margin: auto;
+}
+h1 {
+    font-size: 50px;
+    word-break: break-all;
+}
+.row {
+    margin: 10px -16px;
+}
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+    padding: 10px;
+}
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    display: none; /* Hide all elements by default */
+}
+/* Clear floats after rows */ 
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Content */
+.content {
+    background-color: white;
+    padding: 10px;
+}
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+</style> 
+</head>
+  <body> 
+  <a href="index.html" class="btn btn-info btn-lg" style="margin-left:30px; margin-top:7px;">
+       <span class="glyphicon glyphicon-home"></span> Home
+  </a>
+ <h1 style="text-align:center; margin-top:-25px; font-family:cursive;"><strong>GALLERY</strong></h1>
+ <br>
+<img src="mast.jpg" style="height:400px; width:100%">
+
+<div class="main">
+<input type="radio" onclick="filterSelection('all')" name="category" checked> Show all
+<input type="radio" onclick="filterSelection('nature')" name="category"> Rooms
+<input type="radio" onclick="filterSelection('cars')" name="category"> Bathroom
+<input type="radio" onclick="filterSelection('people')" name="category"> Balcony  
+<input type="radio" onclick="filterSelection('people')" name="category"> Front View
+  
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column nature">
+    <div class="content">
+      <img src="r1.jpg" alt="Mountains" style="width:100%">
+</div>
+  </div>
+  
+  <div class="column nature">
+    <div class="content">
+    <img src="r2.jpg" alt="Lights" style="width:100%">
+     </div>
+ </div>
+ 
+  <div class="column nature">
+    <div class="content">
+    <img src="r3.jpg" alt="Nature" style="width:100%">
+    </div>
+  </div>
+  
+   <div class="column nature">
+    <div class="content">
+    <img src="r4.jpg" alt="Nature" style="width:100%">
+    </div>
+  </div>
+  
+   <div class="column nature">
+    <div class="content">
+    <img src="r5.jpg" alt="Nature" style="width:100%">
+    </div>
+  </div>
+  
+   <div class="column nature">
+    <div class="content">
+    <img src="r6.jpg" alt="Nature" style="width:100%">
+    </div>
+  </div>
+  
+   <div class="column nature">
+    <div class="content">
+    <img src="r7.jpg" alt="Nature" style="width:90% ;">
+    </div>
+  </div>
+  
+  <div class="column car">
+    <div class="content">
+      <img src="b1.jpg" alt="Car" style="width:100%">
+</div>
+  </div>
+  
+  <div class="column cars">
+    <div class="content">
+    <img src="b2.jpg" alt="Car" style="width:100%">
+    </div>
+  </div>
+  
+  <div class="column cars">
+    <div class="content">
+    <img src="b3.jpg" alt="Car" style="width:100%">
+    </div>
+  </div>
+
+   <div class="column cars">
+    <div class="content">
+    <img src="b4.jpg" alt="Car" style="width:90%">
+    </div>
+  </div>
+  
+   <div class="column cars">
+    <div class="content">
+    <img src="b5.jpg" alt="Car" style="width:100%">
+    </div>
+  </div>
+  
+   <div class="column cars">
+    <div class="content">
+    <img src="b6.jpg" alt="Car" style="width:100%">
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+      <img src="/w3images/people1.jpg" alt="" style="width:100%">
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+    <img src="/w3images/people2.jpg" alt="" style="width:100%">
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+    <img src="/w3images/people3.jpg" alt="" style="width:100%">
+    </div>
+  </div>
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+<div id="footer" class="container-fluid">
+ <div class="row">
+    <div class="foot">
+	  <h6 class="headfoot" style="font-size:25px; color:#f1c40f;"><q><em>PLACE WHERE YOU FEEL LIKE HOME</em></q></h6>
+	  <div class="bottom">
+	  <h4 style="color: white;">Sign Up</h4>
+	  <p style="color: white;">Subscribe to our mailing list to receive updates and promotional offers.</p> 
+	  <input type="email" placeholder="Enter email address">
+	  <button class="btn btn-default"><strong>GO</strong></button>
+	  </div>
+	  <p><h5 style="color: white;"><strong>CONTACT</strong></h5></p>
+	<p style="color: white;"><b>  Tel: +91 11 4766 8888<br>
+Fax: +91 11 4383 7777<br>
+Reservations Hotline: 1800 103 9977<br></p>
+<a href="mailto:paridhigupta1996.pg@gmail.com">Email a query to naturelapviewhotel@gmail.com</a>
+	  <section>
+		<ul id='services'>
+		<p style="color: white; font-size: 18px;">Find Us On</p>
+		<li>
+		 <a href="https://www.facebook.com/login/"><div class='entypo-facebook'></div></a>
+		</li>
+		<li>
+		 <a href="https://twitter.com/"><div class='entypo-twitter'></div></a>
+		</li>
+		<li>
+		 <a href="https://plus.google.com/discover"><div class='entypo-gplus'></div></a>
+		</li>
+		</ul>
+	  </section>
+	  <br><br>
+		<p class="copyright">Copyright © 2017 <a href="http://zine.bg/" target="_blank"></a>
+			<span class="second-line">All Rights Reserved.</span>
+		</p>
+		</div>
+      </div> 
+</div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+</script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	<script src="javascript.js"></script>
+  </body>
+</html>

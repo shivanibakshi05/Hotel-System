@@ -1,0 +1,18 @@
+<div id="googleMap" style="width:30%;height:200px"></div>
+
+<script>
+function myMap() {
+var mapProp= {
+    center:new google.maps.LatLng(51.508742,-0.120850),
+    zoom:3,
+	height: 150,
+	width:200,
+};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key= AIzaSyCf81KZxKGawGQd2PTIgqWLifWg4aN8Etk&callback=myMap"></script>
+
+
+https://www.w3schools.com/howto/howto_js_portfolio_filter.asp
